@@ -1,0 +1,39 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+
+    </profiles>
+    <profile>
+        <id>ibm-bamoe-enterprise-maven-repository</id>
+        <repositories>
+            <repository>
+                <id>ibm-bamoe-enterprise-maven-repository</id>
+                <url>https://bamoe-maven-repo-bamoe.apps.itz-zxnzf5.infra01-lb.lon04.techzone.ibm.com</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+            </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <id>ibm-bamoe-enterprise-maven-repository</id>
+                <url>https://bamoe-maven-repo-bamoe.apps.itz-zxnzf5.infra01-lb.lon04.techzone.ibm.com</url>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+            </pluginRepository>
+        </pluginRepositories>
+    </profile>
+    <activeProfiles>
+        <activeProfile>ibm-bamoe-enterprise-maven-repository</activeProfile>
+    </activeProfiles>
+
+
+</settings>

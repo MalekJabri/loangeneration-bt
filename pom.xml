@@ -225,6 +225,37 @@
         <quarkus.package.type>native</quarkus.package.type>
       </properties>
     </profile>
+    
+    <profile>
+      <id>ibm-bamoe-enterprise-maven-repository</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>ibm-bamoe-enterprise-maven-repository</id>
+          <url>https://bamoe-maven-repo-bamoe.apps.itz-zxnzf5.infra01-lb.lon04.techzone.ibm.com</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>ibm-bamoe-enterprise-maven-repository</id>
+          <url>https://bamoe-maven-repo-bamoe.apps.itz-zxnzf5.infra01-lb.lon04.techzone.ibm.com</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
   </profiles>
   
 </project>
