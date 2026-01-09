@@ -1,0 +1,25 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: bamoe-service
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: bamoe-app
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: loan-applicatione
+spec:
+  to:
+    kind: Service
+    name: bamoe-service
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

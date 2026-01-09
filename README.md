@@ -4,15 +4,13 @@
   Copyright IBM Corp. 2025
 -->
 
-# `<Your project's title>`
+# Loan Generation Business Service
 
 > _This project was auto-generated from the BAMOE Canvas Accelerator `Quarkus (DMN)`, and enables Decisions and Rules. It's built on [Quarkus](https://quarkus.io/), the Supersonic Subatomic Java Framework._
->
-> **NOTE**: Some properties configured in `src/main/resources/application.properties` have to be updated replacing the `<TODO>` placeholder with actual values for your usage.
 
 # Description
 
-`<Your project's description>`
+This business service implements loan generation decision logic using DMN (Decision Model and Notation). It provides REST endpoints for evaluating loan applications and making automated lending decisions.
 
 # Building and running
 

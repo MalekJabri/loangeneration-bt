@@ -61,11 +61,11 @@ jobs:
           echo "Building the project with custom Maven repository"
           export TAG="dev_${{ github.run_number }}"
           echo "TAG is set to $TAG"
-          yq e '.spec.template.spec.containers[0].image = "quay.io/malek_jabri/myloanappli:" + strenv(TAG)' -i kub/deployment.yaml
-          gh variable set DEPLOY_IMAGE --body "quay.io/malek_jabri/myloanappli:$TAG" --repo MalekJabri/myloanappli
+          yq e '.spec.template.spec.containers[0].image = "quay.io/malek_jabri/loangeneration-bt:" + strenv(TAG)' -i kub/deployment.yaml
+          gh variable set DEPLOY_IMAGE --body "quay.io/malek_jabri/loangeneration-bt:$TAG" --repo MalekJabri/loangeneration-bt
           #cat  kub/deployment.yaml
           mvn clean install -Dquarkus.container-image.build=true -Dquarkus.container-image.push=true --settings=.github/maven/settings.xml -Dquarkus.profile=github
-          docker images | grep myloanappli || echo "No image found"
+          docker images | grep loangeneration-bt || echo "No image found"
         env:
           GH_TOKEN: ${{ secrets.GIT_TOKEN }}
       - name: deploy on Kubernetes

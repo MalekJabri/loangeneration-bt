@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bamoe-app
+spec:
+  selector:
+    matchLabels:
+      app: bamoe-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bamoe-app
+    spec:
+      containers:
+        - name: bamoe-app
+          image: quay.io/malek_jabri/loangeneration-bt:1.0.0-snapshot
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "1Gi"
+            limits:
+              cpu: "1"
+              memory: "2Gi"
